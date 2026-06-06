@@ -1,4 +1,11 @@
-resource "azurerm_resource_group" "kittu"{
-name = rg1
-location = "eastus"
+terraform {
+  required_providers {
+    azurerm = {
+        source = "hashicorp/azurerm"
+        version = "4.68.0"
+    }
+  }
+}
+provider "azurerm" {
+  features { }
 }
